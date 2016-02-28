@@ -4,6 +4,8 @@ Reproducible Research: Peer Assessment 1
 
 This is course project 1
 
+
+
 ## Loading and preprocessing data
 
 For this assignment the fist step is to load in the data. We also create a datafile wth no NAs
@@ -30,7 +32,7 @@ stepsPerDay <- aggregate(steps ~ date, activityClear,sum)
 hist(stepsPerDay$steps,col = "darkgreen", breaks = 15, main = "Number of steps per day", xlab = "steps")
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
 
 Now we compute mean and median of steps per day
 
@@ -60,7 +62,7 @@ dailySteps <- aggregate(steps ~ interval, activityClear,mean)
 plot(dailySteps$interval,dailySteps$steps,type = "l", main = "Daily activity pattern", xlab = "interval number", ylab = "steps")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
 
 
 ## Imputing missing values
@@ -109,7 +111,7 @@ stepsPerDayFull <- aggregate(steps ~ date, activityClear,sum)
 hist(stepsPerDayFull$steps,col = "darkgreen", breaks = 15, main = "Number of steps per day (with inputed data)", xlab = "steps")
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
+![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png)
 
 Now we compute mean and median of steps per day
 
@@ -156,6 +158,6 @@ g + geom_line()+facet_wrap(~daytype)+xlab("interval number")+
   ggtitle("Activity patterns for weekend and weekdays")
 ```
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
+![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
 
 This concludes the assignement.

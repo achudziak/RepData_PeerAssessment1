@@ -4,6 +4,10 @@ Reproducible Research: Peer Assessment 1
 
 This is course project 1
 
+```{r,echo=FALSE, eval=TRUE}
+opts_chunk$set(echo = TRUE, eval = TRUE)
+```
+
 ## Loading and preprocessing data
 
 For this assignment the fist step is to load in the data. We also create a datafile wth no NAs
